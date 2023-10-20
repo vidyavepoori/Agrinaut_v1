@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css"> <!-- Include your CSS file here -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agronaut Dashboard</title>
+</head>
+
+<body>
+    <!--top nav bar -->
+    <div class="wrapper">
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+
+                </div>
+                <div class="company-details">
+                    <h1>Agronaut</h1>
+                </div>
+            </div>
+
+        </div>
+
+        <!--side nav bar -->
+        <div class="sidebar">
+            <div class="profile">
+                <img src="profile.png" alt="profile_picture">
+                <h3>User_1</h3>
+
+            </div>
+            <ul>
+                <li>
+                    <a href="dashboard.html" class="active">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">My Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="sys_cond.html">
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        <span class="item">System Conditon</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-database"></i></span>
+                        <span class="item">Downloads</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="item">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user-shield"></i></span>
+                        <span class="item">Admin</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-cog"></i></span>
+                        <span class="item">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Container for Cards -->
+
+        <div class="card-container">
+            <!-- Gas Card -->
+            
+            <div class="gas-card">
+                <div class="card-header">Gas Sensor</div>
+               
+                    <div class="gas-container">
+                        NH3 :
+                        <div id="nh3Gauge"></div>
+                        CH4:
+                        <div id="ch4Gauge"></div>
+                        CO2 :
+                        <div id="co2Gauge"></div>
+                    </div>
+                
+            </div>
+
+            <!-- Other Cards (Arranged in a Grid) -->
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-header">Temperature</div>
+                    <div class="card-body">
+                        <div id="temp">
+                            <div id="tempStatus">
+                                Temperature :
+                                <div id="temperature-bar">
+                                    <div id="temperature-marker"></div>
+                                </div>
+                                <div id="temperature-value">0°C</div>
+
+                            </div>
+
+                            <div id="tempStatus">
+                                Humidity :
+                                <div id="temperature-bar">
+                                    <div id="humidity-marker"></div>
+                                </div>
+                                <div id="humidity-value">0%</div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header"> Wind sensors</div>
+                    <div class="card-body">
+                        <div id="wind"></div>
+
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">Air Pressure sensor</div>
+                    <div class="card-body">
+                        <div id="ap"></div>
+
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header"> Light sensor</div>
+                    <div class="card-body">
+                        <div id="light"></div>
+
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">Ph sensor</div>
+                    <div class="card-body">
+                        <div id="ph"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="sidebar">
+        <!-- Your existing sidebar content here -->
+    </div>
+    </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+          <div class="text-center">
+            &copy; 2023 All Rights Reserved By Agronaut
+          </div>
+        </div>
+      </footer>
+
+
+
+<script>
+    var hamburger = document.querySelector(".hamburger");
+    var cardContainer = document.querySelector(".card-container");
+
+    hamburger.addEventListener("click", function () {
+        document.querySelector("body").classList.toggle("active");
+        cardContainer.classList.toggle("active");
+    });
+</script>
+
+
+    <!-- Include Bootstrap and Chart.js JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/justgage/1.4.0/justgage.min.js"></script>
+    <script src="script_DB1.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agronaut</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #081672;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .company-details {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            padding-left: 50px;
+            padding-top: 140px;
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .get-started {
+            flex: 1.5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            font-size: 30px;
+            font-weight: bold;
+            background-color: #ffffff;
+            color: #000000;
+            padding-top: 10px;
+        }
+
+        .animation-text {
+            white-space: nowrap;
+            overflow: hidden;
+            width: 10px;
+            animation: typing 2s steps(10, end) forwards;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        button {
+            background-color: #3bb0e9;
+            /* Light blue background color */
+            color: #fff;
+            /* White text color */
+            padding: 15px 30px;
+            /* Increase padding for button size */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        /* Hover effect for the button */
+        button:hover {
+            background-color: #2a90c7;
+            /* Darker blue on hover */
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="company-details">
+            <h1>Agronaut</h1>
+            <div class="animation-text">
+                Monitering plants in real time.
+            </div>
+        </div>
+        <div class="get-started">
+            <label>Get Started</label> <br>
+            <button id="loginButton">Login</button>
+            <p style="font-size: small;"> <br>
+                <a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Include the external JavaScript file -->
+    <script src="script_HP.js"></script>
+
+</body>
+
+</html>
