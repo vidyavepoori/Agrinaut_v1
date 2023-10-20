@@ -13,5 +13,5 @@ Agronaute is a sophisticated visual aid dashboard designed to facilitate compreh
 
 ## License
 
-Agronaute is released under the Apach License. See the LICENSE file for more details.
+Agronaute is released under the Apache2.0 License. See the LICENSE file for more details.
 
